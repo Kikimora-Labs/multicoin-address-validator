@@ -1,16 +1,13 @@
 // Karma configuration
 module.exports = function (config) {
     config.set({
-        basePath: '',
+        basePath: "",
 
-        frameworks: ['mocha', 'chai'],
+        frameworks: ["mocha", "chai"],
 
-        files: [
-            'dist/wallet-address-validator.min.js',
-            'test/**/*.js'
-        ],
+        files: ["dist/cryptocoin-validator.min.js", "test/**/*.js"],
 
-        reporters: ['progress'],
+        reporters: ["progress"],
 
         port: 9876,
 
@@ -18,10 +15,10 @@ module.exports = function (config) {
 
         logLevel: config.LOG_INFO,
 
-        browsers: ['ChromeHeadless'],
+        browsers: ["ChromeHeadless"],
 
         singleRun: true,
 
-        concurrency: Infinity
-    })
+        concurrency: Infinity,
+    });
 };

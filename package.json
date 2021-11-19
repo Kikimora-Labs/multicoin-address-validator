@@ -1,5 +1,5 @@
 {
-    "name": "cryptocoin-validate",
+    "name": "cryptocoin-validator",
     "description": "Multicoin address validator for Bitcoin and other Altcoins.",
     "keywords": [
         "0x",
@@ -253,13 +253,14 @@
         "type": "git",
         "url": "https://github.com/Kikimora-Labs/multicoin-address-validator.git"
     },
-    "main": "src/wallet_address_validator",
+    "main": "dist/cryptocoin-validator",
+    "types": "types/cryptocoin-validator.d.ts",
     "engines": {
         "node": "*"
     },
     "scripts": {
-        "bundle": "browserify src/wallet_address_validator.js --standalone WAValidator --outfile dist/wallet-address-validator.js",
-        "minify": "uglifyjs -c -m -o dist/wallet-address-validator.min.js -- dist/wallet-address-validator.js",
+        "bundle": "browserify src/cryptocoin_validator.js --standalone WAValidator --outfile dist/cryptocoin-validator.js",
+        "minify": "uglifyjs -c -m -o dist/cryptocoin-validator.min.js -- dist/cryptocoin-validator.js",
         "test:node": "mocha test",
         "test:browser": "npm run bundle && npm run minify && karma start",
         "test": "npm run test:node && npm run test:browser",
