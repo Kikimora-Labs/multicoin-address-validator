@@ -130,7 +130,7 @@ declare module "cryptocoin-validator" {
     interface CurrencyValidator {
         isValidAddress(
             address: string,
-            currency: CurrencyValidator,
+            currency: Currency,
             opts: ValidateOptions
         );
     }
