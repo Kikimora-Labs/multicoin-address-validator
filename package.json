@@ -16,6 +16,8 @@
         "repv2",
         "AuroraCoin",
         "aur",
+        "Avalance",
+        "avax",
         "Bancor",
         "bnt",
         "Bankex",
@@ -24,6 +26,8 @@
         "bat",
         "BeaverCoin",
         "bvc",
+        "Binance",
+        "bnb",
         "BioCoin",
         "bio",
         "Bitcoin",
@@ -245,7 +249,7 @@
         "ZenCash",
         "zen"
     ],
-    "version": "0.5.4",
+    "version": "0.5.9",
     "author": "George <goshancode@gmail.com>",
     "homepage": "https://github.com/Kikimora-Labs/multicoin-address-validator",
     "license": "MIT",
@@ -256,8 +260,9 @@
     "main": "dist/cryptocoin-validator",
     "types": "types/cryptocoin-validator.d.ts",
     "engines": {
-        "node": "*"
+        "node": ">=12.0.0"
     },
+    "engineStrict": true,
     "scripts": {
         "bundle": "browserify src/cryptocoin_validator.js --standalone WAValidator --outfile dist/cryptocoin-validator.js",
         "minify": "uglifyjs -c -m -o dist/cryptocoin-validator.min.js -- dist/cryptocoin-validator.js",
@@ -275,7 +280,7 @@
         "js-sha512": "^0.8.0",
         "jssha": "^2.4.2",
         "lodash.isequal": "^4.5.0",
-        "minify": "^8.0.3"
+        "minify": "^6.0.1"
     },
     "devDependencies": {
         "browserify": "^17.0.0",
@@ -284,6 +289,7 @@
         "karma-chai": "^0.1.0",
         "karma-chrome-launcher": "^3.1.0",
         "karma-mocha": "^2.0.1",
+        "minify": "^6.0.1",
         "mocha": "^8.3.2",
         "uglify-es": "^3.3.9"
     },
